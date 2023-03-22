@@ -1,0 +1,36 @@
+<div class="scroll-table">
+	<table>
+		<thead>
+			<tr>
+                <form action="index.php" method="POST">
+                    <th><button name="removeAllAction" type="submit" class="buttonRemove">Remove all</button></td></th>
+                    <th><input maxlength="40" minlength="1" pattern="^[a-zA-Z0-9_.-]*$" type="text" name="name"></th>
+                    <th><select name="typenumber" class="selectTypeNum">
+                        <optgroup label="Standart">
+                            <option value="pcs">pcs</option>
+                        </optgroup>
+                        <optgroup label="Weight">
+                            <option value="gramm">gramm</option>
+                            <option value="kg">kg</option>
+                            <option value="tons">tons</option>
+                        </optgroup>
+                        <optgroup label="Volume">
+                            <option value="milleliters">milleliters</option>
+                            <option value="liters">liters</option>
+                            <option value="cube">cube</option>
+                        </optgroup>
+                        <optgroup label="length">
+                            <option value="mm">mm</option>
+                            <option value="cm">cm</option>
+                            <option value="meters">meters</option>
+                        </optgroup>
+                    </select></th>
+                    <th><input maxlength="11" minlength="1" pattern="^[0-9]*$" type="number" min="0" name="number" id="inputNumber"></th>
+                    <th><input maxlength="11" minlength="1" pattern="^[0-9]*$" type="number" min="0" name="price" id="inputPrice"></th>
+                    <th><input maxlength="11" minlength="1" pattern="^[0-9]*$" type="number" min="0" name="allprice" id="inputAllPrice"></th>
+                    <th><input maxlength="11" minlength="1" pattern="^[0-9]*$" type="number" min="0" name="resultprice" id="inputResultPrice"></th>
+                    <th><button name="addAction" type="submit">Add</button></td></th>
+                </form>
+			</tr>
+		</thead>
+	</table>
