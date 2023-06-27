@@ -7,6 +7,30 @@ class Dao {
     private $user = 'root'; 
     private $password = ''; 
 
+    public function createDatabase() 
+    {
+        $connection = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
+        $query = 'CREATE DATABASE IF NOT EXISTS `storage`';
+        $result = mysqli_query($connection, $query);
+        $connection->close();
+
+        return $result;
+    }
+
+    public function createUserTable() 
+    {
+        $connection = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
+        $query = 'CREATE TABLE IF NOT EXISTS `users` (
+            `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+            `login` varchar(40) NOT NULL,
+            `password` varchar(40) NOT NULL
+          )';
+        $result = mysqli_query($connection, $query);
+        $connection->close();
+       
+        return $result;
+    }
+
     public function findAll($userId) 
     {
         $connection = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
